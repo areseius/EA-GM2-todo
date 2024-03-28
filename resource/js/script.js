@@ -47,7 +47,9 @@ list.addEventListener("click", (e) => {
 // remove all tasks
 
 function deleteAll() {
-  list.innerHTML = "";
-  counter.textContent = 0;
-  textInput.value = "";
+  if (counter.textContent != 0 && confirm("Do you want to delete all tasks ?")) {
+    list.innerHTML = "";
+    counter.textContent = 0;
+    textInput.value = "";
+  }
 }

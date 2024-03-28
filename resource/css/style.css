@@ -42,12 +42,13 @@ body {
   border-radius: 7px;
   border: none;
   outline: none;
-  border: 2px solid gray;
+  border: 2px solid rgba(128, 128, 128, 0.664);
   font-weight: bold;
   color: gray;
 }
 .todoinput form .textinput::placeholder {
   opacity: 0.5;
+  font-size: 18px;
 }
 
 .todoinput form .buttoninput {
@@ -58,8 +59,15 @@ body {
   background-color: rgb(129, 129, 247);
   font-weight: bold;
   border-radius: 7px;
-  border: none;
+  border: 2px solid transparent;
   outline: none;
+  transition: all 0.3s;
+}
+
+.buttoninput:hover {
+  background-color: transparent !important;
+  color: rgb(129, 129, 247) !important;
+  border: 2px solid rgb(129, 129, 247) !important;
 }
 
 /* custom area */
@@ -79,6 +87,7 @@ h1 {
   font-weight: bold;
   font-size: 30px;
   color: gray;
+  user-select: none;
 }
 
 .custom button {
@@ -92,7 +101,15 @@ h1 {
   outline: none;
   font-weight: bold;
   font-size: 15px;
+  transition: all 0.3s;
 }
+
+.custom button:hover {
+  background-color: rgb(129, 129, 247) !important;
+  color: white !important;
+  border: 2px solid transparent;
+}
+
 h1 span {
   color: rgb(129, 129, 247);
   font-size: 40px;
@@ -138,6 +155,11 @@ h1 span {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 1px solid white;
+  transition: all 1s;
+}
+
+.todotaskbox ul li i:hover {
+  transform: rotate(360deg);
 }
