@@ -1,0 +1,126 @@
+body {
+  background-color: #252432;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todobox {
+  margin: 20px 0;
+  background-color: whitesmoke;
+  width: 30%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.todoinput {
+  width: 100%;
+  margin-block: 20px;
+}
+
+.todoinput form {
+  margin-inline: auto;
+  padding: 0 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoinput form .textinput {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+.todoinput form .buttoninput {
+  width: 100px;
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.custom button {
+  cursor: pointer;
+  padding: 15px;
+  background-color: transparent;
+  color: blue;
+  font-weight: bold;
+  border-radius: 7px;
+  border: 2px solid blue;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+h1 span {
+  color: rgb(129, 129, 247);
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.todotaskbox {
+  width: 100%;
+}
+.todotaskbox ul {
+  margin-inline: 20px;
+}
+
+.todotaskbox ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgb(129, 129, 247);
+  margin-block: 10px;
+  user-select: none;
+}
+
+.todotaskbox ul li .listText {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 85%;
+
+  overflow-wrap: break-word;
+}
+
+.todotaskbox ul li i {
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
