@@ -15,8 +15,7 @@ function createListItem(txt) {
   i.setAttribute("class", "fa-solid fa-trash");
   p.setAttribute("class", "listText");
 
-  p.textContent = txt;
-
+  p.appendChild(document.createTextNode(txt));
   li.appendChild(p);
   li.appendChild(i);
 
@@ -47,7 +46,10 @@ list.addEventListener("click", (e) => {
 // remove all tasks
 
 function deleteAll() {
-  if (counter.textContent != 0 && confirm("Do you want to delete all tasks ?")) {
+  if (
+    counter.textContent != 0 &&
+    confirm("Do you want to delete all tasks ?")
+  ) {
     list.innerHTML = "";
     counter.textContent = 0;
     textInput.value = "";

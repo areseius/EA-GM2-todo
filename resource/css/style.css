@@ -70,9 +70,9 @@ body {
   border: 2px solid rgb(129, 129, 247) !important;
 }
 
-/* custom area */
+/* middle area */
 
-.custom {
+.middle {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +90,7 @@ h1 {
   user-select: none;
 }
 
-.custom button {
+.middle button {
   cursor: pointer;
   padding: 15px;
   background-color: transparent;
@@ -104,7 +104,7 @@ h1 {
   transition: all 0.3s;
 }
 
-.custom button:hover {
+.middle button:hover {
   background-color: rgb(129, 129, 247) !important;
   color: white !important;
   border: 2px solid transparent;
