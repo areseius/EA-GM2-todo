@@ -1,9 +1,8 @@
 const button = document.querySelector(".buttoninput");
-const text = document.querySelector(".textinput");
+const textInput = document.querySelector(".textinput");
 const listItem = document.querySelector(".todoitem");
 const list = document.querySelector("ul");
 const counter = document.querySelector("span");
-let task = "";
 
 // create task element
 
@@ -29,16 +28,16 @@ function createListItem(txt) {
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
-  task = text.value;
-  text.value = "";
-  task.trim() &&
-    list.appendChild(createListItem(task.trim())) &&
+  textInput.value.trim() &&
+    list.appendChild(createListItem(textInput.value.trim())) &&
     counter.textContent++;
+
+  textInput.value = "";
 });
 
 // remove task from list
 
-window.addEventListener("click", (e) => {
+list.addEventListener("click", (e) => {
   if (e.target.classList[0] == "fa-solid") {
     e.target.parentElement.remove();
     counter.textContent--;
@@ -50,5 +49,5 @@ window.addEventListener("click", (e) => {
 function deleteAll() {
   list.innerHTML = "";
   counter.textContent = 0;
-  text.value = "";
+  textInput.value = "";
 }

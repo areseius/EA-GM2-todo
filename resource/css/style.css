@@ -1,10 +1,14 @@
+/* body */
+
 body {
-  background-color: #252432;
+  background-color: rgb(129, 129, 247);
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* todobox */
+
 .todobox {
-  margin: 20px 0;
+  margin-top: 20px;
   background-color: whitesmoke;
   width: 30%;
   margin-inline: auto;
@@ -28,6 +32,8 @@ body {
   justify-content: space-between;
 }
 
+/* todoinput */
+
 .todoinput form .textinput {
   height: 50px;
   width: 100%;
@@ -38,26 +44,25 @@ body {
   outline: none;
   border: 2px solid gray;
   font-weight: bold;
+  color: gray;
 }
+.todoinput form .textinput::placeholder {
+  opacity: 0.5;
+}
+
 .todoinput form .buttoninput {
   width: 100px;
   cursor: pointer;
   margin-left: 10px;
   color: white;
-  background-color: blue;
+  background-color: rgb(129, 129, 247);
   font-weight: bold;
   border-radius: 7px;
   border: none;
   outline: none;
 }
 
-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 30px;
-}
+/* custom area */
 
 .custom {
   display: flex;
@@ -66,14 +71,24 @@ h1 {
   width: 100%;
   padding: 20px;
 }
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: gray;
+}
+
 .custom button {
   cursor: pointer;
   padding: 15px;
   background-color: transparent;
-  color: blue;
+  color: rgb(129, 129, 247);
   font-weight: bold;
   border-radius: 7px;
-  border: 2px solid blue;
+  border: 2px solid rgb(129, 129, 247);
   outline: none;
   font-weight: bold;
   font-size: 15px;
@@ -83,6 +98,8 @@ h1 span {
   font-size: 40px;
   margin-left: 10px;
 }
+
+/* todotaskbox */
 
 .todotaskbox {
   width: 100%;
@@ -116,11 +133,11 @@ h1 span {
   display: inline-block;
   font-size: 20px;
   cursor: pointer;
-  background-color: blue;
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  border: 1px solid white;
 }
