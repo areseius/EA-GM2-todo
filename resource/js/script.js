@@ -55,3 +55,60 @@ function deleteAll() {
     textInput.value = "";
   }
 }
+
+// -------------------------------------------------------- array version
+
+// let todos = [];
+
+// // create task element
+
+// function createListItem(txt) {
+//   const li = document.createElement("li");
+//   const p = document.createElement("p");
+//   const i = document.createElement("i");
+
+//   li.setAttribute("class", "todoitem");
+//   i.setAttribute("class", "fa-solid fa-trash");
+//   p.setAttribute("class", "listText");
+
+//   p.appendChild(document.createTextNode(txt));
+//   li.appendChild(p);
+//   li.appendChild(i);
+
+//   return li;
+// }
+
+// // add task to list
+
+// button.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   if (textInput.value.trim()) {
+//     todos.push(textInput.value.trim());
+//     list.appendChild(createListItem(todos.at(-1)));
+//     counter.textContent++;
+//     textInput.value = "";
+//   }
+// });
+
+// // remove task from list
+
+// list.addEventListener("click", (e) => {
+//   if (e.target.classList[0] == "fa-solid") {
+//     todos.splice(todos.indexOf(e.target.previousSibling.textContent), 1);
+//     e.target.parentElement.remove();
+//     counter.textContent--;
+//   }
+// });
+
+// // remove all tasks
+
+// function deleteAll() {
+//   if (counter.textContent != 0 && confirm("Do you want to delete all tasks ?"))
+//   {
+//     todos.length = 0;
+//     list.innerHTML = "";
+//     counter.textContent = 0;
+//     textInput.value = "";
+//   }
+// }
