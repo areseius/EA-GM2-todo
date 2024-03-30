@@ -140,7 +140,7 @@ h1 span {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  width: 85%;
+  width: 75%;
 
   overflow-wrap: break-word;
 }
@@ -160,6 +160,49 @@ h1 span {
   transition: all 1s;
 }
 
-.todotaskbox ul li i:hover {
-  transform: rotate(360deg);
+/* edit- --------------------------------------------------------- */
+
+.editArea {
+  background-color: rgba(0, 0, 0, 0.459);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.editBox {
+  width: 700px;
+  height: 300px;
+  background-color: rgb(129, 129, 247);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+#editInput {
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+#editButton {
+  font-size: 60px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+#editInput::placeholder {
+  color: rgba(255, 255, 255, 0.514);
 }
