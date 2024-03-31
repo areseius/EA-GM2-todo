@@ -3,15 +3,16 @@
 body {
   background-color: rgb(129, 129, 247);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 /* todobox */
 
 .todobox {
-  margin-top: 20px;
+  margin: 20px;
   background-color: whitesmoke;
-  width: 30%;
-  margin-inline: auto;
+  width: clamp(200px, 100%, 600px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +22,7 @@ body {
 
 .todoinput {
   width: 100%;
-  margin-block: 20px;
+  margin-top: 20px;
 }
 
 .todoinput form {
@@ -38,7 +39,7 @@ body {
   height: 50px;
   width: 100%;
   padding: 0 10px;
-  font-size: 20px;
+  font-size: clamp(10px, 4vw, 20px);
   border-radius: 7px;
   border: none;
   outline: none;
@@ -48,11 +49,12 @@ body {
 }
 .todoinput form .textinput::placeholder {
   opacity: 0.5;
-  font-size: 18px;
+  font-size: clamp(12px, 3vw, 18px);
 }
 
 .todoinput form .buttoninput {
-  width: 100px;
+  padding: clamp(5px, 3vw, 15px);
+  font-size: clamp(10px, 3vw, 15px);
   cursor: pointer;
   margin-left: 10px;
   color: white;
@@ -85,14 +87,14 @@ h1 {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 30px);
   color: gray;
   user-select: none;
 }
 
 .middle button {
   cursor: pointer;
-  padding: 15px;
+  padding: clamp(5px, 3vw, 15px);
   background-color: transparent;
   color: rgb(129, 129, 247);
   font-weight: bold;
@@ -100,7 +102,7 @@ h1 {
   border: 2px solid rgb(129, 129, 247);
   outline: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: clamp(10px, 3vw, 15px);
   transition: all 0.3s;
 }
 
@@ -112,8 +114,8 @@ h1 {
 
 h1 span {
   color: rgb(129, 129, 247);
-  font-size: 40px;
-  margin-left: 10px;
+  font-size: clamp(25px, 4vw, 40px);
+  margin-left: 5px;
 }
 
 /* todotaskbox */
@@ -127,7 +129,6 @@ h1 span {
 
 .todotaskbox ul li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
   border-radius: 10px;
@@ -139,9 +140,8 @@ h1 span {
 .todotaskbox ul li .listText {
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  width: 75%;
-
+  font-size: clamp(10px, 4vw, 20px);
+  width: 78%;
   overflow-wrap: break-word;
 }
 
@@ -151,13 +151,14 @@ h1 span {
   font-size: 20px;
   cursor: pointer;
   width: 50px;
+  flex-shrink: 1;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   border: 1px solid white;
-  transition: all 1s;
+  margin-left: 5px;
 }
 
 /* edit- --------------------------------------------------------- */
@@ -182,11 +183,12 @@ h1 span {
   padding-inline: 20px;
   border-radius: 20px;
   border: 2px solid white;
+  margin-inline: 20px;
 }
 #editInput {
-  height: 50px;
+  height: clamp(40px, 4vw, 60px);
   width: 100%;
-  font-size: 20px;
+  font-size: clamp(10px, 3vw, 20px);
   background-color: transparent;
   outline: none;
   border-radius: 10px;
@@ -197,7 +199,7 @@ h1 span {
   font-size: 25px;
 }
 #editButton {
-  font-size: 60px;
+  font-size: clamp(40px, 4vw, 60px);
   margin-left: 20px;
   cursor: pointer;
   color: white;
@@ -205,4 +207,27 @@ h1 span {
 
 #editInput::placeholder {
   color: rgba(255, 255, 255, 0.514);
+}
+
+@media only screen and (max-width: 600px) {
+  .todotaskbox ul li .listText {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .todobox {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .todotaskbox ul li .listText {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .todotaskbox ul li .listText {
+    width: 50%;
+  }
 }
