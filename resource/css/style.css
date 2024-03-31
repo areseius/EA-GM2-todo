@@ -141,8 +141,10 @@ h1 span {
   color: white;
   font-weight: bold;
   font-size: clamp(10px, 4vw, 20px);
-  width: 78%;
+  width: 80%;
+  min-width: 2%;
   overflow-wrap: break-word;
+  background-color: red;
 }
 
 .todotaskbox ul li i {
@@ -209,25 +211,8 @@ h1 span {
   color: rgba(255, 255, 255, 0.514);
 }
 
-@media only screen and (max-width: 600px) {
-  .todotaskbox ul li .listText {
-    width: 70%;
-  }
-}
 @media only screen and (max-width: 450px) {
   .todobox {
     padding: 0px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .todotaskbox ul li .listText {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  .todotaskbox ul li .listText {
-    width: 50%;
   }
 }
